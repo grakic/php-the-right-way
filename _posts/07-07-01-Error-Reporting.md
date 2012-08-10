@@ -17,7 +17,7 @@ Knowing this, recommended settings on error reporting to set in your `php.ini` (
 for placing PHP configuration) are:
 
 - `display_errors = Off`
-- For PHP 5.4 `error_reporting = E_ALL` or `error_reporting = E_STRICT | E_ALL` for earlier versions.
+- `error_reporting = E_ALL` for PHP 5.4, or `-1` for earlier versions
 - `log_errors = On`
 
 You must also configure the `error_log` directive to select logging to a file, a web server log or to the system logging

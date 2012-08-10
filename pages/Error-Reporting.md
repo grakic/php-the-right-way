@@ -29,9 +29,10 @@ logging and `error_log` tells if errors should be logged into a file, to the web
 facility. Another directive `display_errors` configures if reported errors will be displayed in the output (e.g. in
 the web page content).
 
-For PHP 5.3, it is recommended to set `error_reporting = E_ALL | E_STRICT`.
+It is recommended to set `error_reporting = E_ALL`.
 
-In PHP 5.4 `E_STRICT` is included in `E_ALL`, so setting `error_reporting = E_ALL` is enough.
+For PHP 5.3 and earlier not all error types are included in `E_ALL`. You can set `error_reporting = -1` to workaround
+this issue.
 
 Configuration directive `display_errors` __must be Off__ in the production environment as it can expose details about
 your application to the attacker, making it __easier to exploit any security issues__ in it. In cases where foreign
